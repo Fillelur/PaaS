@@ -8,7 +8,7 @@ function App() {
     fetch('/api')
       .then((response) => response.json())
       .then((result) => {
-        setRows(result.rows);
+        setRows(result.rows.name);
       })
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
