@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <p>{rows ? rows.join(', ') : 'Loading...'}</p>
+      <p>{rows}</p>
     </>
   );
 }
