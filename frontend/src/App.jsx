@@ -1,22 +1,23 @@
-import { useEffect } from 'react'
-import './App.css'
+import { useEffect, useState } from 'react';
+import './App.css';
 
 function App() {
-  let a;
+  const [rows, setRows] = useState(null);
 
   useEffect(() => {
     fetch('/api')
       .then((response) => response.json())
       .then((result) => {
-        a = result.rows
+        setRows(result.rows);
       })
-  }, [])
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []);
 
   return (
     <>
-      <p>{a}</p>
+      <p>{rows ? rows.join(', ') : 'Loading...'}</p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
