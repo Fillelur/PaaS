@@ -2,20 +2,26 @@ import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [rows, setRows] = useState(null);
+  const [rows, setRows] = useState([]);
 
   useEffect(() => {
     fetch('/api')
       .then((response) => response.json())
       .then((result) => {
-        setRows(result.rows.name);
+        setRows(result.rows);
       })
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
   return (
     <>
-      <p>{rows}</p>
+      {rows.length > 0 ? (
+        rows.map((row, index) => (
+          <p key={index}>{row}</p>
+        ))
+      ) : (
+        <p>Loading...</p>
+      )}
     </>
   );
 }
