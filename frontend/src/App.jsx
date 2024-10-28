@@ -10,7 +10,7 @@ function App() {
     fetch('/api')
       .then((response) => response.json())
       .then((result) => {
-        alert(`Hello ${result.hello}!`)
+        alert(`Hello ${result.rows.name}!`)
       })
   }, [])
 
