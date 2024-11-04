@@ -27,8 +27,8 @@ client.connect()
 
 app.get('/api', async (_request, response) => {
   const { rows } = await client.query(
-    'SELECT * FROM cities WHERE population > $1',
-    [0]
+    'SELECT * FROM food WHERE favourite = $1',
+    [true]
   )
 
   response.send(rows)

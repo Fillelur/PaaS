@@ -1,12 +1,12 @@
 render page
-
+https://dashboard.render.com/web/srv-csbqv4lds78s73bdqqq0/deploys/dep-csg1dpbv2p9s73fl38m0
 
 render api
 https://dashboard.render.com/d/dpg-csfv8cggph6c73cuusjg-a
 
 actual page
 https://paas3.onrender.com/
-något är fel och jag har inte tid att fixa det till deadline
+något är fel och jag har inte tid att fixa det till deadline skicka gärna på teams ifall du hittar felet / felen
 
 
 Content Delivery Networks

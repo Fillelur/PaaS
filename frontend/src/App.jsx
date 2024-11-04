@@ -8,7 +8,7 @@ function App() {
     fetch('/api')
       .then((response) => response.json())
       .then((result) => {
-        setRows(result.rows);
+        setRows(result);
       })
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
@@ -17,7 +17,7 @@ function App() {
     <>
       {rows.length > 0 ? (
         rows.map((row, index) => (
-          <p key={index}>{row}</p>
+          <p key={index}>{row.name}</p>
         ))
       ) : (
         <p>Loading...</p>
